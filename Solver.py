@@ -20,6 +20,7 @@ while notDone:
     
     while corPos:
         corPos = input('Letter in Correct Position: ')
+        corPos = corPos.lower()
         if corPos == '0':
             break
         if corPos:
@@ -27,6 +28,7 @@ while notDone:
             dicOne[corPos] = int(Pos)
     while cor:
         cor = input('Letter in Incorrect Postiion: ')
+        cor = cor.lower()
         if cor == '0':
             break
         if cor:
@@ -39,9 +41,11 @@ while notDone:
                     dicTwo[cor].append(IncPos)           
     while FalseLet:
         FalseL = input('Letter not in Word: ')
+        FalseL = FalseL.lower()
         if FalseL == '0':
             break
-        Three.append(FalseL)
+        if FalseL not in dicOne or FalseL not in dicTwo:
+            Three.append(FalseL)
         
     for word,value in data.items():
         count = 0
