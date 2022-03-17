@@ -44,7 +44,7 @@ while notDone:
         FalseL = FalseL.lower()
         if FalseL == '0':
             break
-        if FalseL not in dicOne or FalseL not in dicTwo and FalseL not in Three:
+        if FalseL not in dicOne and FalseL not in dicTwo and FalseL not in Three:
             Three.append(FalseL)
         
     for word,value in data.items():
